@@ -12,7 +12,7 @@ A short video demonstrating the use of ImageMesh and highlighting some of the ke
 
 https://player.vimeo.com/video/561663847
 
-# Compatibility
+## Compatibility
 
 Please note that ImageMesh may not render correctly on mobile devices. Desktop platforms are preferred. Requires a modern browser e.g. Firefox or Chrome.
 
