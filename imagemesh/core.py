@@ -196,6 +196,9 @@ def get_images():
             ann_filepath = current_app.config['ANNOY_TERNARY']
         elif embedding == "cats":
             ann_filepath = current_app.config['ANNOY_CATS']
+        elif embedding == "DeepCluster":
+            ann = AnnoyIndex(100, 'angular')
+            ann_filepath = current_app.config['ANNOY_DC']
 
         # print(h.heap())
         ann.load(ann_filepath)
