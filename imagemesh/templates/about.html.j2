@@ -33,6 +33,8 @@ ImageMesh is a visual explorer application that allows interactive visualisation
 
 ImageMesh draws inspiration from [imgs.ai](https://imgs.ai/), developed by Fabian Offert, with contributions by Peter Bell and Oleg Harlamov. It has been developed as a mode of encountering the practical and conceptual research conducted by [Anna Munster](https://research.unsw.edu.au/people/professor-anna-marie-munster), Professor of Media Arts and Theory, University of New South Wales, [Adrian MacKenzie](https://researchers.anu.edu.au/researchers/mackenzie-a), Professor of Sociology, Australian National University and Dr. [Kynan Tan](https://kynantan.com/), postdoctoral fellow on this project. The project underpinning its development, ‘Re-imaging the empirical: statistical visualisation in art and science’ was supported by funding from the Australian Research Council, Discovery Project scheme. More information about this project can be found [here](https://github.com/re-imaging/re-imaging).
 
+Thank you to arXiv for use of its open access interoperability.
+
 ## Screencast
 
 A short video demonstrating the use of ImageMesh and highlighting some of the key features.
@@ -55,7 +57,7 @@ In addition to the search mode, the results can be filtered according to the met
 
 ## Embeddings
 
-There are four embeddings currently available. Each embedding is created by using a particular neural network to process each image in the dataset and then saving the resulting data. This data was further reduced using Principal Component Analysis, we used the [scikit-learn IncrementalPCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html). The reduced data was then used to construct a nearest neighbours map using the [Annoy library](https://github.com/spotify/annoy), which allows for fast approximate k-nearest neighbours over large sets of data. The machine learning embeddings are pre-computed, meaning that the nearest neighbour search is fast and computationally cheap. This enables exploration of the dataset using the images themselves to bring up different ‘slices’ of the dataset according the way different neural networks interpret the image data.
+There are five embeddings currently available. Each embedding is created by using a particular neural network to process each image in the dataset and then saving the resulting data. This data was further reduced using Principal Component Analysis, we used the [scikit-learn IncrementalPCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html). The reduced data was then used to construct a nearest neighbours map using the [Annoy library](https://github.com/spotify/annoy), which allows for fast approximate k-nearest neighbours over large sets of data. The machine learning embeddings are pre-computed, meaning that the nearest neighbour search is fast and computationally cheap. This enables exploration of the dataset using the images themselves to bring up different ‘slices’ of the dataset according the way different neural networks interpret the image data.
 
 ### - ternary
 
