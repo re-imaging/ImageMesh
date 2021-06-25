@@ -24,7 +24,7 @@ In addition to the search mode, the results can be filtered according to the met
 
 ## Embeddings
 
-There are four embeddings currently available. Each embedding is created by using a particular neural network to process each image in the dataset and then saving the resulting data. This data was further reduced using Principal Component Analysis, we used the [scikit-learn IncrementalPCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html). The reduced data was then used to construct a nearest neighbours map using the [Annoy library](https://github.com/spotify/annoy), which allows for fast approximate k-nearest neighbours over large sets of data. The machine learning embeddings are pre-computed, meaning that the nearest neighbour search is fast and computationally cheap. This enables exploration of the dataset using the images themselves to bring up different ‘slices’ of the dataset according the way different neural networks interpret the image data.
+There are five embeddings currently available. Each embedding is created by using a particular neural network to process each image in the dataset and then saving the resulting data. This data was further reduced using Principal Component Analysis, we used the [scikit-learn IncrementalPCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html). The reduced data was then used to construct a nearest neighbours map using the [Annoy library](https://github.com/spotify/annoy), which allows for fast approximate k-nearest neighbours over large sets of data. The machine learning embeddings are pre-computed, meaning that the nearest neighbour search is fast and computationally cheap. This enables exploration of the dataset using the images themselves to bring up different ‘slices’ of the dataset according the way different neural networks interpret the image data.
 
 ### - ternary
 
@@ -41,6 +41,10 @@ The raw pixels of each image. Generally produces associations based on overall c
 ### - cats
 
 A classifier trained on images of cats and dogs. We used keras to train this network, following [this example](https://keras.io/examples/vision/image_classification_from_scratch/). Produces some unlikely associations between images.
+
+### - DeepCluster
+
+We used the method of unsupervised learning outlined in the arXiv paper [Deep Clustering for Unsupervised Learning of Visual Features](https://arxiv.org/abs/1807.05520) to train a classifier that predicts whether images belong to 100 different clusters. This produces strong similarity among particular image trends, e.g. logos, schematics, photographs, graphs showing small multiples. This provides the highest degree of learning based on the arXiv images dataset. For more details on the code used, see the [DeepCluster GitHub](https://github.com/facebookresearch/deepcluster).
 
 ## Data Policy
 
